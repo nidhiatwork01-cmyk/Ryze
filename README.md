@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # Ryze Website Redesign
 
 A modern, responsive redesign of the Ryze AI advertising platform website, built with Next.js 14, TypeScript, and Tailwind CSS.
@@ -163,3 +164,6 @@ Created for Ryze internship assignment submission.
 
 **Note**: This is a redesign project. All content and branding belong to Ryze (get-ryze.ai).
 
+=======
+# Ryze
+>>>>>>> ed826c5fc47c8b93f970a5ec20fb0490a3e0e803
