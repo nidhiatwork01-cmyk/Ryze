@@ -18,13 +18,13 @@ const features = [
     icon: Brain,
     title: 'AI Creative Generation',
     description: 'Automatically generate high-performing ad creatives that resonate with your audience and improve CTR.',
-    color: 'from-primary-500 to-primary-600',
+    color: 'from-emerald-500 to-emerald-600',
   },
   {
     icon: BarChart3,
     title: '24/7 Performance Audits',
     description: 'Continuous monitoring and optimization of your campaigns, catching issues before they impact performance.',
-    color: 'from-accent-500 to-accent-600',
+    color: 'from-amber-500 to-amber-600',
   },
   {
     icon: Zap,
@@ -65,7 +65,7 @@ export default function Features() {
         >
           <h2 className="text-4xl md:text-5xl font-bold mb-4">
             An AI Marketer That{' '}
-            <span className="bg-gradient-to-r from-primary-600 to-accent-600 bg-clip-text text-transparent">
+            <span className="bg-gradient-to-r from-emerald-600 to-amber-600 bg-clip-text text-transparent">
               Does It All
             </span>
           </h2>
@@ -84,9 +84,15 @@ export default function Features() {
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
                 transition={{ duration: 0.5, delay: index * 0.1 }}
-                className="group relative bg-white p-8 rounded-2xl border border-gray-200 hover:border-primary-300 hover:shadow-xl transition-all duration-300"
+                className="group relative bg-white p-8 rounded-2xl border border-gray-200 hover:border-emerald-300 hover:shadow-xl transition-all duration-300 overflow-hidden"
               >
-                <div className={`inline-flex p-4 rounded-xl bg-gradient-to-br ${feature.color} mb-6 group-hover:scale-110 transition-transform`}>
+                <div className="relative w-full h-48 mb-6 rounded-xl overflow-hidden bg-gradient-to-br from-gray-50 to-gray-100">
+                  <div className={`absolute inset-0 bg-gradient-to-br ${feature.color} opacity-5 group-hover:opacity-10 transition-opacity`} />
+                  <div className="absolute inset-0 flex items-center justify-center">
+                    <Icon className="w-16 h-16 text-gray-300 group-hover:text-emerald-600 transition-colors" />
+                  </div>
+                </div>
+                <div className={`inline-flex p-4 rounded-xl bg-gradient-to-br ${feature.color} mb-4 group-hover:scale-110 transition-transform`}>
                   <Icon className="w-6 h-6 text-white" />
                 </div>
                 <h3 className="text-xl font-bold mb-3 text-gray-900">{feature.title}</h3>

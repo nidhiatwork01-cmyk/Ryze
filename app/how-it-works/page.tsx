@@ -17,14 +17,14 @@ const steps = [
     title: 'Connect Your Accounts',
     description: 'Link your Google Ads, Meta Ads, Amazon, and other advertising platforms. Our secure integration takes just minutes.',
     icon: Link2,
-    color: 'from-primary-500 to-primary-600',
+    color: 'from-emerald-500 to-emerald-600',
   },
   {
     number: '02',
     title: 'AI Analyzes Your Performance',
     description: 'Our AI agents analyze your campaigns, creatives, and performance data to identify optimization opportunities.',
     icon: Brain,
-    color: 'from-accent-500 to-accent-600',
+    color: 'from-amber-500 to-amber-600',
   },
   {
     number: '03',
@@ -57,12 +57,12 @@ export default function HowItWorksPage() {
       <Header />
       
       {/* Hero Section */}
-      <section className="pt-32 pb-16 bg-gradient-to-br from-primary-50 via-white to-accent-50">
+      <section className="pt-32 pb-16 bg-gradient-to-br from-emerald-50 via-white to-amber-50">
         <div className="container-custom">
           <div className="max-w-3xl mx-auto text-center">
             <h1 className="text-5xl md:text-6xl font-bold mb-6">
               How Ryze
-              <span className="block bg-gradient-to-r from-primary-600 to-accent-600 bg-clip-text text-transparent">
+              <span className="block bg-gradient-to-r from-emerald-600 to-amber-600 bg-clip-text text-transparent">
                 Works
               </span>
             </h1>
@@ -120,7 +120,7 @@ export default function HowItWorksPage() {
           <div className="max-w-4xl mx-auto">
             <h2 className="text-4xl md:text-5xl font-bold text-center mb-4">
               Connect Your
-              <span className="block bg-gradient-to-r from-primary-600 to-accent-600 bg-clip-text text-transparent">
+              <span className="block bg-gradient-to-r from-emerald-600 to-amber-600 bg-clip-text text-transparent">
                 Advertising Platforms
               </span>
             </h2>
@@ -132,7 +132,7 @@ export default function HowItWorksPage() {
               {platforms.map((platform) => (
                 <div
                   key={platform.name}
-                  className="bg-white p-6 rounded-xl border border-gray-200 hover:border-primary-300 hover:shadow-lg transition-all"
+                  className="bg-white p-6 rounded-xl border border-gray-200 hover:border-emerald-300 hover:shadow-lg transition-all"
                 >
                   <div className="flex items-center justify-between">
                     <span className="font-semibold text-gray-900">{platform.name}</span>
@@ -154,20 +154,20 @@ export default function HowItWorksPage() {
           <div className="max-w-4xl mx-auto">
             <h2 className="text-4xl md:text-5xl font-bold text-center mb-12">
               Why Choose
-              <span className="block bg-gradient-to-r from-primary-600 to-accent-600 bg-clip-text text-transparent">
+              <span className="block bg-gradient-to-r from-emerald-600 to-amber-600 bg-clip-text text-transparent">
                 Ryze?
               </span>
             </h2>
 
             <div className="grid md:grid-cols-2 gap-8">
-              <div className="bg-gradient-to-br from-primary-50 to-primary-100 p-8 rounded-2xl">
+              <div className="bg-gradient-to-br from-emerald-50 to-emerald-100 p-8 rounded-2xl">
                 <h3 className="text-2xl font-bold mb-4 text-gray-900">24/7 Optimization</h3>
                 <p className="text-gray-700">
                   Our AI agents work around the clock to optimize your campaigns, even when you're not online.
                 </p>
               </div>
 
-              <div className="bg-gradient-to-br from-accent-50 to-accent-100 p-8 rounded-2xl">
+              <div className="bg-gradient-to-br from-amber-50 to-amber-100 p-8 rounded-2xl">
                 <h3 className="text-2xl font-bold mb-4 text-gray-900">Time Savings</h3>
                 <p className="text-gray-700">
                   Get back hours each week from manual reporting and optimization tasks. Focus on strategy instead.
@@ -193,19 +193,20 @@ export default function HowItWorksPage() {
       </section>
 
       {/* CTA Section */}
-      <section className="section-padding bg-gradient-to-br from-primary-600 to-accent-600">
+      <section className="section-padding bg-gradient-to-br from-emerald-600 to-amber-600">
         <div className="container-custom">
           <div className="max-w-3xl mx-auto text-center">
             <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
               Ready to Get Started?
             </h2>
-            <p className="text-xl text-primary-100 mb-8">
+            <p className="text-xl text-emerald-100 mb-8">
               Join 2000+ clients using Ryze to scale their advertising
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Link
                 href="#get-started"
-                className="bg-white text-primary-600 hover:bg-gray-100 font-semibold py-4 px-8 rounded-lg transition-all duration-200 shadow-xl hover:shadow-2xl transform hover:-translate-y-1 inline-flex items-center justify-center"
+                href="/signup"
+                className="bg-white text-emerald-600 hover:bg-gray-100 font-semibold py-4 px-8 rounded-lg transition-all duration-200 shadow-xl hover:shadow-2xl transform hover:-translate-y-1 inline-flex items-center justify-center"
               >
                 Get Started Free
                 <ArrowRight className="ml-2 w-5 h-5" />

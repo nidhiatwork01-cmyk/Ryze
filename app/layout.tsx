@@ -1,5 +1,6 @@
 import type { Metadata } from 'next'
 import './globals.css'
+import CustomCursor from '@/components/CustomCursor'
 
 export const metadata: Metadata = {
   title: 'Ryze - Let AI Manage Your Ads',
@@ -17,7 +18,7 @@ export const metadata: Metadata = {
     description: 'Autonomous AI marketer that manages your Google Ads, Meta Ads, and more.',
   },
   viewport: 'width=device-width, initial-scale=1',
-  themeColor: '#0ea5e9',
+  themeColor: '#10b981',
 }
 
 export default function RootLayout({
@@ -26,8 +27,11 @@ export default function RootLayout({
   children: React.ReactNode
 }) {
   return (
-    <html lang="en">
-      <body>{children}</body>
+    <html lang="en" className="scroll-smooth">
+      <body>
+        <CustomCursor />
+        {children}
+      </body>
     </html>
   )
 }

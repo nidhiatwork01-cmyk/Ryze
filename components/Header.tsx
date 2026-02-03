@@ -27,17 +27,27 @@ export default function Header() {
   return (
     <header
       className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
-        scrolled ? 'bg-white shadow-lg' : 'bg-white/95 backdrop-blur-sm'
+        scrolled 
+          ? 'bg-white/80 backdrop-blur-xl shadow-lg border-b border-gray-200/50' 
+          : 'bg-white/10 backdrop-blur-md border-b border-white/10'
       }`}
     >
       <nav className="container-custom">
         <div className="flex items-center justify-between h-20">
           {/* Logo */}
           <Link href="/" className="flex items-center space-x-2 group" aria-label="Ryze Home">
-            <div className="bg-gradient-to-br from-primary-600 to-accent-600 p-2 rounded-lg group-hover:scale-110 transition-transform">
+            <motion.div
+              whileHover={{ rotate: 360 }}
+              transition={{ duration: 0.6 }}
+              className="bg-gradient-to-br from-emerald-600 to-amber-600 p-2 rounded-lg group-hover:scale-110 transition-transform shadow-lg"
+            >
               <Zap className="w-6 h-6 text-white" aria-hidden="true" />
-            </div>
-            <span className="text-2xl font-bold bg-gradient-to-r from-primary-600 to-accent-600 bg-clip-text text-transparent">
+            </motion.div>
+            <span className={`text-2xl font-black transition-colors ${
+              scrolled 
+                ? 'bg-gradient-to-r from-emerald-600 to-amber-600 bg-clip-text text-transparent'
+                : 'text-white'
+            }`}>
               Ryze
             </span>
           </Link>
@@ -48,14 +58,22 @@ export default function Header() {
               <Link
                 key={link.name}
                 href={link.href}
-                className="text-gray-700 hover:text-primary-600 font-medium transition-colors"
+                className={`font-semibold transition-colors ${
+                  scrolled
+                    ? 'text-gray-700 hover:text-emerald-600'
+                    : 'text-white/90 hover:text-white'
+                }`}
               >
                 {link.name}
               </Link>
             ))}
             <Link
-              href="#get-started"
-              className="btn-primary"
+              href="/signup"
+              className={`font-bold py-3 px-6 rounded-xl transition-all duration-300 shadow-lg hover:shadow-xl hover:scale-105 ${
+                scrolled
+                  ? 'bg-gradient-to-r from-emerald-600 to-amber-600 text-white'
+                  : 'bg-white/10 backdrop-blur-sm text-white border-2 border-white/30 hover:bg-white/20'
+              }`}
             >
               Get Started
             </Link>
@@ -64,14 +82,16 @@ export default function Header() {
           {/* Mobile Menu Button */}
           <button
             onClick={() => setIsOpen(!isOpen)}
-            className="md:hidden p-2 rounded-lg hover:bg-gray-100 transition-colors"
+            className={`md:hidden p-2 rounded-lg transition-colors ${
+              scrolled ? 'hover:bg-gray-100' : 'hover:bg-white/10'
+            }`}
             aria-label="Toggle menu"
             aria-expanded={isOpen}
           >
             {isOpen ? (
-              <X className="w-6 h-6" />
+              <X className={`w-6 h-6 ${scrolled ? 'text-gray-700' : 'text-white'}`} />
             ) : (
-              <Menu className="w-6 h-6" />
+              <Menu className={`w-6 h-6 ${scrolled ? 'text-gray-700' : 'text-white'}`} />
             )}
           </button>
         </div>
@@ -83,7 +103,7 @@ export default function Header() {
               initial={{ opacity: 0, height: 0 }}
               animate={{ opacity: 1, height: 'auto' }}
               exit={{ opacity: 0, height: 0 }}
-              className="md:hidden overflow-hidden"
+              className="md:hidden overflow-hidden bg-white/95 backdrop-blur-xl border-t border-gray-200"
             >
               <div className="py-4 space-y-4">
                 {navLinks.map((link) => (
@@ -91,15 +111,15 @@ export default function Header() {
                     key={link.name}
                     href={link.href}
                     onClick={() => setIsOpen(false)}
-                    className="block text-gray-700 hover:text-primary-600 font-medium py-2 transition-colors"
+                    className="block text-gray-700 hover:text-emerald-600 font-semibold py-2 transition-colors"
                   >
                     {link.name}
                   </Link>
                 ))}
                 <Link
-                  href="#get-started"
+                  href="/signup"
                   onClick={() => setIsOpen(false)}
-                  className="btn-primary inline-block"
+                  className="btn-primary inline-block w-full text-center"
                 >
                   Get Started
                 </Link>
@@ -111,4 +131,3 @@ export default function Header() {
     </header>
   )
 }
-

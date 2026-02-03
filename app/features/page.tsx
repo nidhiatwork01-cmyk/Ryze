@@ -26,7 +26,7 @@ const features = [
       'A/B testing recommendations',
       'Performance-based optimization',
     ],
-    color: 'from-primary-500 to-primary-600',
+    color: 'from-emerald-500 to-emerald-600',
   },
   {
     icon: BarChart3,
@@ -38,7 +38,7 @@ const features = [
       'Budget waste identification',
       'Tracking error alerts',
     ],
-    color: 'from-accent-500 to-accent-600',
+    color: 'from-amber-500 to-amber-600',
   },
   {
     icon: Zap,
@@ -96,12 +96,12 @@ export default function FeaturesPage() {
       <Header />
       
       {/* Hero Section */}
-      <section className="pt-32 pb-16 bg-gradient-to-br from-primary-50 via-white to-accent-50">
+      <section className="pt-32 pb-16 bg-gradient-to-br from-emerald-50 via-white to-amber-50">
         <div className="container-custom">
           <div className="max-w-3xl mx-auto text-center">
             <h1 className="text-5xl md:text-6xl font-bold mb-6">
               Powerful Features for
-              <span className="block bg-gradient-to-r from-primary-600 to-accent-600 bg-clip-text text-transparent">
+              <span className="block bg-gradient-to-r from-emerald-600 to-amber-600 bg-clip-text text-transparent">
                 Modern Marketers
               </span>
             </h1>
@@ -157,18 +157,18 @@ export default function FeaturesPage() {
       </section>
 
       {/* CTA Section */}
-      <section className="section-padding bg-gradient-to-br from-primary-600 to-accent-600">
+      <section className="section-padding bg-gradient-to-br from-emerald-600 to-amber-600">
         <div className="container-custom">
           <div className="max-w-3xl mx-auto text-center">
             <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
               Ready to Get Started?
             </h2>
-            <p className="text-xl text-primary-100 mb-8">
+            <p className="text-xl text-emerald-100 mb-8">
               Join thousands of marketers using Ryze to scale their advertising
             </p>
             <Link
               href="#get-started"
-              className="bg-white text-primary-600 hover:bg-gray-100 font-semibold py-4 px-8 rounded-lg transition-all duration-200 shadow-xl hover:shadow-2xl transform hover:-translate-y-1 inline-flex items-center"
+              className="bg-white text-emerald-600 hover:bg-gray-100 font-semibold py-4 px-8 rounded-lg transition-all duration-200 shadow-xl hover:shadow-2xl transform hover:-translate-y-1 inline-flex items-center"
             >
               Get Started Free
               <ArrowRight className="ml-2 w-5 h-5" />
